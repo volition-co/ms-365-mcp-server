@@ -26,7 +26,7 @@ export function generateMcpTools(openapiTrimmedFile, clientFilePath) {
     }
 
     execSync(
-      `npx -y openapi-zod-client "${openapiTrimmedFile}" -o "${clientFilePath}" --with-description --strict-objects --additional-props-default-value=false`,
+      `npx --no openapi-zod-client "${openapiTrimmedFile}" -o "${clientFilePath}" --with-description --strict-objects --additional-props-default-value=false`,
       {
         stdio: 'inherit',
       }
